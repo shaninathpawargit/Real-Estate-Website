@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} | Graphical Dashboard {% endblock %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row mb-4 mt-4 justify-content-center">
+        {% for chart in charts %}
+            <div class="col-md-6 col-lg-6">
+                <div class="card  mb-4 mt-4">
+                    <div class="card-body">
+                        <div style="height:300; width:300">
+                            {{ chart.html|safe }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
+
+{% block js_scripts %}
+    {% for chart in charts %}
+        {{ chart.js|safe }}
+    {% endfor %}
+{% endblock %}

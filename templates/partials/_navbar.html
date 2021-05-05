@@ -43,6 +43,17 @@
                     <a class="nav-link" href="{% url 'listings' %}">Featured Listings</a>
                    
                 </li>
+                <li 
+                    {% if 'graphdashboard' in request.path %}
+                        class="nav-item active mr-3"
+                    {% else %}
+                        class="nav-item mr-3"
+
+                    {% endif %}
+                >
+                    <a class="nav-link" href="{% url 'graphdashboard' %}">Graph Dashboard</a>
+                   
+                </li>
             </ul>
 
             <ul class="navbar-nav ml-auto">

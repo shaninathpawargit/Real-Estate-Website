@@ -37,6 +37,12 @@
     <script src="{% static 'js/bootstrap.bundle.min.js' %} "></script>
     <script src="{% static 'js/lightbox.min.js' %} "></script>
     <script src="{% static 'js/main.js' %} "></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3"></script>
+    <script>
+        $(document).ready(function(){
+            {% block js_scripts %}{% endblock %}
+        })
+    </script>
 </body>
 
 </html>
